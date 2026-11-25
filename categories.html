@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="mn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#11110f"><title>Ангиллууд — НИЙТ.мн</title>
+<style>
+:root{--bg:#11110f;--panel:#1b1b18;--gold:#f3c64e;--text:#f8f6ef;--muted:#a6a397;--line:#37362f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+header{height:70px;border-bottom:1px solid var(--line);display:flex;align-items:center}.nav{display:flex;align-items:center;justify-content:space-between}.logo{font-size:26px;font-weight:950;letter-spacing:-1.5px}.logo span{color:var(--gold)}.back{font-size:13px;color:var(--gold);font-weight:750}
+main{padding:36px 0 70px}.crumb{font-size:12px;color:var(--muted);margin-bottom:20px}.crumb a{color:var(--gold)}h1{font-size:clamp(30px,5vw,46px);letter-spacing:-1.8px;margin:0 0 10px}.intro{color:var(--muted);font-size:14px;line-height:1.7;margin:0 0 25px}
+.layout{display:grid;grid-template-columns:270px 1fr;gap:20px}.sidebar,.content{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:17px}.side-title{font-size:11px;letter-spacing:1.5px;color:var(--muted);font-weight:850;margin:2px 0 12px}.cat-list{display:grid;gap:6px}.cat{display:flex;align-items:center;gap:11px;padding:11px;border:1px solid transparent;border-radius:11px;background:transparent;color:#d5d2c8;text-align:left;cursor:pointer}.cat:hover,.cat.active{background:#302918;border-color:#695426;color:var(--gold)}.cat .ico{font-size:18px;width:25px}.cat b{font-size:12px}
+.content-head{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}.content-head h2{font-size:21px;margin:0}.count{font-size:11px;color:var(--muted)}.search{display:flex;background:#11110f;border:1px solid var(--line);border-radius:11px;padding:5px;margin-bottom:17px}.search input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:white;padding:10px;font-size:13px}.search button{border:0;border-radius:8px;background:var(--gold);font-weight:850;padding:0 15px;cursor:pointer}
+.sub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.sub{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#22221e;border:1px solid #38372f;border-radius:11px;padding:14px;font-size:12px;color:#e9e6dc}.sub:hover{border-color:#92742e}.sub span{color:var(--gold);font-size:16px}.empty{display:none;color:var(--muted);font-size:13px;padding:15px 0}.note{margin-top:18px;padding:14px;border:1px dashed #62502b;border-radius:12px;color:#bcb5a1;font-size:11px;line-height:1.6}.note strong{color:var(--gold)}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.cat-list{grid-template-columns:repeat(2,1fr)}.sidebar{padding:13px}.content{padding:14px}}
+@media(max-width:420px){.cat-list,.sub-grid{grid-template-columns:1fr}.content-head{align-items:flex-start;flex-direction:column}}
+</style></head>
+<body><header><div class="wrap nav"><a class="logo" href="index.html">НИЙТ<span>.мн</span></a><a class="back" href="index.html">← Нүүр хуудас</a></div></header>
+<main class="wrap"><div class="crumb"><a href="index.html">НИЙТ.мн</a> / Ангиллууд</div><h1>Хэрэгтэй бүх зүйл нэг дор.</h1><p class="intro">Ангиллаа сонгоод тухайн чиглэлийн дэд ангиллуудыг хараарай.</p>
+<div class="layout"><aside class="sidebar"><div class="side-title">ҮНДСЭН АНГИЛАЛ</div><div class="cat-list" id="catList"></div></aside>
+<section class="content"><div class="content-head"><h2 id="selectedTitle">Бүх ангилал</h2><span class="count" id="count"></span></div><div class="search"><input id="filter" placeholder="Дэд ангилал хайх..." aria-label="Дэд ангилал хайх"><button id="clear" type="button">Арилгах</button></div><div class="sub-grid" id="subGrid"></div><div class="empty" id="empty">Тохирох дэд ангилал олдсонгүй.</div><div class="note"><strong>Тайлбар:</strong> Энэ бол НИЙТ.мн-ийн ангиллын эхний бүтэц. Бодит бараа, үйлчилгээний заруудыг дараагийн хөгжүүлэлтийн шатанд өгөгдлийн сантай холбоно.</div></section></div></main>
+<script>
+const data=[
+{slug:'shopping',name:'Худалдаа',icon:'🛍️',subs:['Гар утас, таблет','Компьютер, дагалдах хэрэгсэл','Гэр ахуйн цахилгаан бараа','Хувцас, гутал','Гоо сайхан, арьс арчилгаа','Гэр ахуйн бараа','Спорт, аяллын хэрэгсэл','Хүүхдийн бараа','Тавилга, интерьер','Бусад бараа']},
+{slug:'property',name:'Үл хөдлөх',icon:'🏙️',subs:['Орон сууц худалдах','Орон сууц түрээслэх','Хаус, амины орон сууц','Газар худалдах','Оффис, үйлчилгээний талбай','Агуулах, үйлдвэрлэлийн байр','Үл хөдлөх хөрөнгийн зуучлал']},
+{slug:'auto',name:'Авто',icon:'🚘',subs:['Суудлын автомашин','Жийп, SUV','Ачааны автомашин','Мотоцикл','Авто сэлбэг','Дугуй, обуд','Засвар, үйлчилгээ','Авто түрээс']},
+{slug:'services',name:'Үйлчилгээ',icon:'🛠️',subs:['Гэр ахуйн засвар','Цэвэрлэгээ','Сантехник, цахилгаан','Барилга, засал','Тээвэр, хүргэлт','Гоо сайхан','Хууль, зөвлөгөө','Фото, видео үйлчилгээ']},
+{slug:'food',name:'Хоол, хүнс',icon:'🍜',subs:['Ресторан, кафе','Хүргэлтийн хоол','Хүнсний дэлгүүр','Мах, махан бүтээгдэхүүн','Жимс, ногоо','Талх, нарийн боов','Кофе, ундаа']},
+{slug:'jobs',name:'Ажил, бизнес',icon:'💼',subs:['Ажлын байр','Цагийн ажил','Зайнаас ажиллах','Бизнесийн үйлчилгээ','Тоног төхөөрөмж','Түншлэл, хөрөнгө оруулалт']},
+{slug:'education',name:'Боловсрол',icon:'📚',subs:['Хэлний сургалт','Мэргэжлийн сургалт','Хүүхдийн сургалт','Онлайн сургалт','Их, дээд сургууль','Хувийн багш']},
+{slug:'health',name:'Эрүүл мэнд',icon:'✚',subs:['Эмнэлэг, клиник','Шүдний эмнэлэг','Эмийн сан','Оношилгоо, лаборатори','Сэргээн засах','Эрүүл мэндийн зөвлөгөө']},
+{slug:'travel',name:'Аялал',icon:'✈️',subs:['Аяллын багц','Зочид буудал','Амралтын газар','Онгоц, тээврийн тасалбар','Хөтөч, аяллын үйлчилгээ']},
+{slug:'events',name:'Үзвэр, эвент',icon:'🎭',subs:['Тоглолт','Кино, театр','Үзэсгэлэн','Спортын арга хэмжээ','Хурим, арга хэмжээний үйлчилгээ']},
+{slug:'pets',name:'Амьтан',icon:'🐾',subs:['Нохой, муур','Амьтны хэрэгсэл','Мал эмнэлэг','Амьтан асаргаа','Амьтан үрчлүүлэх']},
+{slug:'other',name:'Бусад',icon:'✦',subs:['Олон нийтийн мэдээлэл','Сайн дурын ажил','Хандив, тусламж','Бусад ангилал']}
+];
+const list=document.getElementById('catList'),grid=document.getElementById('subGrid'),title=document.getElementById('selectedTitle'),count=document.getElementById('count'),filter=document.getElementById('filter'),empty=document.getElementById('empty');
+let active='all';
+function render(){list.innerHTML='<button class="cat '+(active==='all'?'active':'')+'" data-slug="all"><span class="ico">✦</span><b>Бүх ангилал</b></button>'+data.map(c=>'<button class="cat '+(active===c.slug?'active':'')+'" data-slug="'+c.slug+'"><span class="ico">'+c.icon+'</span><b>'+c.name+'</b></button>').join('');
+const selected=active==='all'?data:data.filter(c=>c.slug===active);title.textContent=active==='all'?'Бүх ангилал':selected[0].name;
+const q=filter.value.trim().toLocaleLowerCase('mn');const subs=selected.flatMap(c=>c.subs.map(s=>({name:s,category:c.name,slug:c.slug}))).filter(s=>!q||(s.name+' '+s.category).toLocaleLowerCase('mn').includes(q));
+grid.innerHTML=subs.map(s=>'<a class="sub" href="#" onclick="event.preventDefault();alert(\'Энэ дэд ангиллын зар, үйлчилгээний жагсаалт дараагийн шатанд холбогдоно.\')">'+s.name+'<span>↗</span></a>').join('');count.textContent=subs.length+' дэд ангилал';empty.style.display=subs.length?'none':'block';
+}
+list.addEventListener('click',e=>{const b=e.target.closest('[data-slug]');if(!b)return;active=b.dataset.slug;filter.value='';render()});filter.addEventListener('input',render);document.getElementById('clear').addEventListener('click',()=>{filter.value='';render();filter.focus()});
+const requested=new URLSearchParams(location.search).get('category');active=data.some(c=>c.slug===requested)?requested:'all';render();
+</script></body></html>
