@@ -38,7 +38,7 @@ let active='all';
 function render(){list.innerHTML='<button class="cat '+(active==='all'?'active':'')+'" data-slug="all"><span class="ico">✦</span><b>Бүх ангилал</b></button>'+data.map(c=>'<button class="cat '+(active===c.slug?'active':'')+'" data-slug="'+c.slug+'"><span class="ico">'+c.icon+'</span><b>'+c.name+'</b></button>').join('');
 const selected=active==='all'?data:data.filter(c=>c.slug===active);title.textContent=active==='all'?'Бүх ангилал':selected[0].name;
 const q=filter.value.trim().toLocaleLowerCase('mn');const subs=selected.flatMap(c=>c.subs.map(s=>({name:s,category:c.name,slug:c.slug}))).filter(s=>!q||(s.name+' '+s.category).toLocaleLowerCase('mn').includes(q));
-grid.innerHTML=subs.map(s=>'<a class="sub" href="#" onclick="event.preventDefault();alert(\'Энэ дэд ангиллын зар, үйлчилгээний жагсаалт дараагийн шатанд холбогдоно.\')">'+s.name+'<span>↗</span></a>').join('');count.textContent=subs.length+' дэд ангилал';empty.style.display=subs.length?'none':'block';
+grid.innerHTML=subs.map(s=>'<a class="sub" href="listings.html?category='+s.slug+'&sub='+encodeURIComponent(s.name)+'">'+s.name+'<span>↗</span></a>').join('');count.textContent=subs.length+' дэд ангилал';empty.style.display=subs.length?'none':'block';
 }
 list.addEventListener('click',e=>{const b=e.target.closest('[data-slug]');if(!b)return;active=b.dataset.slug;filter.value='';render()});filter.addEventListener('input',render);document.getElementById('clear').addEventListener('click',()=>{filter.value='';render();filter.focus()});
 const requested=new URLSearchParams(location.search).get('category');active=data.some(c=>c.slug===requested)?requested:'all';render();
