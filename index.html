@@ -23,7 +23,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 35px;margin-top:12px}.foo
 <body>
 <header><div class="wrap nav">
 <a class="logo" href="#">НИЙТ<span>.мн</span></a>
-<nav class="links" id="navlinks"><a href="#categories">Ангилал</a><a href="#today">Өнөөдөр</a><a href="#services">Үйлчилгээ</a><a href="#business">Бизнес</a></nav>
+<nav class="links" id="navlinks"><a href="categories.html">Ангилал</a><a href="#today">Өнөөдөр</a><a href="#services">Үйлчилгээ</a><a href="#business">Бизнес</a></nav>
 <button class="menu" aria-label="Цэс нээх" onclick="const n=document.getElementById('navlinks');n.style.display=n.style.display==='flex'?'none':'flex'">☰</button>
 <div class="actions"><button class="btn btn-ghost" onclick="notice('Нэвтрэх хэсэг дараагийн хөгжүүлэлтийн шатанд холбогдоно.')">Нэвтрэх</button><button class="btn btn-gold" onclick="document.getElementById('business').scrollIntoView({behavior:'smooth'})">Бизнесээ нэмэх</button></div>
 </div></header>
@@ -37,20 +37,20 @@ footer{border-top:1px solid var(--line);padding:30px 0 35px;margin-top:12px}.foo
 </div><div class="city" aria-label="Улаанбаатар хотын шөнийн панорама дүрслэл"><div class="sun"></div><div class="city-label">МОНГОЛ • УЛААНБААТАР</div><div class="skyline"><i class="building b1"></i><i class="building b2"></i><i class="building b3"></i><i class="building b4"></i><i class="building b5"></i><i class="building b6"></i><i class="building b7"></i></div><div class="city-caption">Нэг хот. Нэг платформ. Нэг дор.</div></div></div></section>
 <section class="section" id="today"><div class="wrap"><div class="section-title"><div><h2>Өнөөдөр НИЙТ-д</h2><p>Өдөр тутмын хэрэгцээний мэдээлэл, боломжууд.</p></div><span class="all">ӨДӨР БҮР ШИНЭЧЛЭГДЭНЭ</span></div>
 <div class="deal-grid"><article class="deal primary"><div class="tag">ӨДРИЙН ОНЦЛОХ</div><h3>Өдөр бүр шинэ боломж</h3><p>Онцгой санал, хямдрал, шинэ үйлчилгээ нэг дор төвлөрнө.</p><div class="big">НИЙТ</div></article><article class="deal"><div class="tag">ЦАГ АГААР</div><div class="value">Удахгүй</div><div class="hint">Бодит цагийн мэдээлэл холбогдоно</div></article><article class="deal"><div class="tag">ВАЛЮТЫН ХАНШ</div><div class="value">Удахгүй</div><div class="hint">Шинэчилсэн ханшийн эх сурвалж холбогдоно</div></article></div></div></section>
-<section class="section" id="categories"><div class="wrap"><div class="section-title"><div><h2>Хэрэгтэй бүх ангилал</h2><p>Өөрийн хайж буй зүйлээ ангиллаар нь олоорой.</p></div><a class="all" href="#services">БҮГДИЙГ ҮЗЭХ →</a></div>
+<section class="section" id="categories"><div class="wrap"><div class="section-title"><div><h2>Хэрэгтэй бүх ангилал</h2><p>Өөрийн хайж буй зүйлээ ангиллаар нь олоорой.</p></div><a class="all" href="categories.html">БҮГДИЙГ ҮЗЭХ →</a></div>
 <div class="service-grid" id="serviceGrid">
-<a class="service" href="#services" data-key="худалдаа бараа бүтээгдэхүүн"><div class="emoji">🛍️</div><b>Худалдаа</b><small>Бараа бүтээгдэхүүн</small></a>
-<a class="service" href="#services" data-key="үл хөдлөх орон сууц түрээс"><div class="emoji">🏙️</div><b>Үл хөдлөх</b><small>Орон сууц, түрээс</small></a>
-<a class="service" href="#services" data-key="авто машин сэлбэг"><div class="emoji">🚘</div><b>Авто</b><small>Машин, сэлбэг</small></a>
-<a class="service" href="#services" data-key="үйлчилгээ засвар мэргэжил"><div class="emoji">🛠️</div><b>Үйлчилгээ</b><small>Мэргэжлийн тусламж</small></a>
-<a class="service" href="#services" data-key="хоол хүнс ресторан"><div class="emoji">🍜</div><b>Хоол, хүнс</b><small>Хүнс, ресторан</small></a>
-<a class="service" href="#services" data-key="ажил бизнес карьер"><div class="emoji">💼</div><b>Ажил, бизнес</b><small>Ажлын байр, боломж</small></a>
-<a class="service" href="#services" data-key="боловсрол сургалт"><div class="emoji">📚</div><b>Боловсрол</b><small>Сургалт, хичээл</small></a>
-<a class="service" href="#services" data-key="эрүүл мэнд эмнэлэг"><div class="emoji">✚</div><b>Эрүүл мэнд</b><small>Эмнэлэг, үйлчилгээ</small></a>
-<a class="service" href="#services" data-key="аялал амралт зочид буудал"><div class="emoji">✈️</div><b>Аялал</b><small>Аялал, байр</small></a>
-<a class="service" href="#services" data-key="үзвэр эвент тоглолт"><div class="emoji">🎭</div><b>Үзвэр, эвент</b><small>Арга хэмжээ</small></a>
-<a class="service" href="#services" data-key="амьтан тэжээвэр"><div class="emoji">🐾</div><b>Амьтан</b><small>Тэжээвэр амьтан</small></a>
-<a class="service" href="#services" data-key="бусад мэдээлэл"><div class="emoji">✦</div><b>Бусад</b><small>Бусад хэрэгцээ</small></a>
+<a class="service" href="categories.html?category=shopping" data-key="худалдаа бараа бүтээгдэхүүн"><div class="emoji">🛍️</div><b>Худалдаа</b><small>Бараа бүтээгдэхүүн</small></a>
+<a class="service" href="categories.html?category=property" data-key="үл хөдлөх орон сууц түрээс"><div class="emoji">🏙️</div><b>Үл хөдлөх</b><small>Орон сууц, түрээс</small></a>
+<a class="service" href="categories.html?category=auto" data-key="авто машин сэлбэг"><div class="emoji">🚘</div><b>Авто</b><small>Машин, сэлбэг</small></a>
+<a class="service" href="categories.html?category=services" data-key="үйлчилгээ засвар мэргэжил"><div class="emoji">🛠️</div><b>Үйлчилгээ</b><small>Мэргэжлийн тусламж</small></a>
+<a class="service" href="categories.html?category=food" data-key="хоол хүнс ресторан"><div class="emoji">🍜</div><b>Хоол, хүнс</b><small>Хүнс, ресторан</small></a>
+<a class="service" href="categories.html?category=jobs" data-key="ажил бизнес карьер"><div class="emoji">💼</div><b>Ажил, бизнес</b><small>Ажлын байр, боломж</small></a>
+<a class="service" href="categories.html?category=education" data-key="боловсрол сургалт"><div class="emoji">📚</div><b>Боловсрол</b><small>Сургалт, хичээл</small></a>
+<a class="service" href="categories.html?category=health" data-key="эрүүл мэнд эмнэлэг"><div class="emoji">✚</div><b>Эрүүл мэнд</b><small>Эмнэлэг, үйлчилгээ</small></a>
+<a class="service" href="categories.html?category=travel" data-key="аялал амралт зочид буудал"><div class="emoji">✈️</div><b>Аялал</b><small>Аялал, байр</small></a>
+<a class="service" href="categories.html?category=events" data-key="үзвэр эвент тоглолт"><div class="emoji">🎭</div><b>Үзвэр, эвент</b><small>Арга хэмжээ</small></a>
+<a class="service" href="categories.html?category=pets" data-key="амьтан тэжээвэр"><div class="emoji">🐾</div><b>Амьтан</b><small>Тэжээвэр амьтан</small></a>
+<a class="service" href="categories.html?category=other" data-key="бусад мэдээлэл"><div class="emoji">✦</div><b>Бусад</b><small>Бусад хэрэгцээ</small></a>
 </div><p id="emptyState" style="display:none;color:var(--muted);font-size:13px">Тохирох ангилал олдсонгүй.</p></div></section>
 <section class="section" id="services"><div class="wrap"><div class="section-title"><div><h2>Нэг дороос. Илүү амархан.</h2><p>Хэрэглэгч болон бизнес эрхлэгчдэд зориулсан нэгдсэн орчин.</p></div></div>
 <div class="quick-grid"><a class="quick-card" href="#categories"><span class="quick-icon">⌕</span><span><b>Хайж олох</b><small>Хэрэгтэй зүйлээ хурдан</small></span></a><a class="quick-card" href="#business"><span class="quick-icon">▣</span><span><b>Бизнесээ таниулах</b><small>Өөрийн үйлчилгээг хүргэх</small></span></a><a class="quick-card" href="#business"><span class="quick-icon">◇</span><span><b>Шинэ хэрэглэгч</b><small>Хэрэглэгчтэйгээ холбогдох</small></span></a><a class="quick-card" href="#today"><span class="quick-icon">✧</span><span><b>Өдөр тутмын мэдээлэл</b><small>Нэг платформоос</small></span></a></div></div></section>
