@@ -26,7 +26,7 @@ footer{border-top:1px solid var(--line);padding:27px 0 35px}.foot{display:flex;j
 <a class="logo" href="index.html">НИЙТ<span>.мн</span></a>
 <label class="location" aria-label="Байршил"><span>⌖</span><select id="location"><option>Улаанбаатар</option><option>Дархан</option><option>Эрдэнэт</option><option>Орон нутаг</option></select></label>
 <form class="search" id="searchForm"><input id="searchInput" placeholder="Бараа, үйлчилгээ, газар хайх..." aria-label="Хайлт"><button type="submit">Хайх →</button></form>
-<div class="account"><a href="businesses.html">Бизнесүүд</a><a href="#" onclick="notice('Нэвтрэх системийг дараагийн шатанд холбоно.');return false">Нэвтрэх</a><a class="register" href="#" onclick="notice('Бүртгэлийн системийг дараагийн шатанд холбоно.');return false">Бүртгүүлэх</a></div>
+<div class="account"><a href="businesses.html">Бизнесүүд</a><a href="auth.html">Нэвтрэх</a><a class="register" href="auth.html?mode=signup">Бүртгүүлэх</a></div>
 </div><div class="navline"><nav class="wrap navitems">
 <a href="#deals">Хямдрал</a><a href="listings.html?category=services">Үйлчилгээ</a><a href="listings.html?category=food">Хоол</a><a href="businesses.html">Бизнес</a><a href="#information">Мэдээлэл</a><a href="listings.html?category=events">Эвент</a><a href="#nearby">Ойр орчин</a>
 </nav></div></header>
@@ -67,7 +67,7 @@ footer{border-top:1px solid var(--line);padding:27px 0 35px}.foot{display:flex;j
 <a class="biz" href="businesses.html"><div class="bizlogo">B</div><div><h3>Бизнесийн жишээ №2</h3><p>Үйлчилгээ · Улаанбаатар</p><div class="verified">✦ Бизнесийн танилцуулга</div></div></a>
 <a class="biz" href="businesses.html"><div class="bizlogo">C</div><div><h3>Бизнесийн жишээ №3</h3><p>Хоол, ресторан · Улаанбаатар</p><div class="verified">✦ Бизнесийн танилцуулга</div></div></a>
 </div><p class="info-foot">Бизнесийн нэрс нь жишээ. Бодит бизнесийн профайл, лого, баталгаажуулалт өгөгдлийн сантай холбогдоно.</p></div></section>
-<section class="section"><div class="wrap"><div class="business-cta"><div><h2>Бизнесээ НИЙТ-д нээгээрэй.</h2><p>Дэлгүүр, үйлчилгээ, хямдралын саналаа байршуулж шинэ хэрэглэгчдэд хүр.</p></div><a class="btn gold" href="#" onclick="notice('Бизнесийн самбар болон бүртгэлийг дараагийн шатанд холбоно.');return false">Бизнесийн самбар →</a></div></div></section>
+<section class="section"><div class="wrap"><div class="business-cta"><div><h2>Бизнесээ НИЙТ-д нээгээрэй.</h2><p>Дэлгүүр, үйлчилгээ, хямдралын саналаа байршуулж шинэ хэрэглэгчдэд хүр.</p></div><a class="btn gold" href="auth.html?mode=signup">Бизнесээр бүртгүүлэх →</a></div></div></section>
 </main>
 <footer><div class="wrap foot"><div><a class="logo" href="index.html">НИЙТ<span>.мн</span></a><p>Өдөр бүр хэрэгтэй бүх зүйл.</p></div><div class="footlinks"><a href="categories.html">Ангилал</a><a href="#deals">Хямдрал</a><a href="#business">Бизнес эрхлэгчдэд</a><span>© 2026 НИЙТ.мн</span></div></div></footer>
 <script>
